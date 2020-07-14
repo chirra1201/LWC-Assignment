@@ -1,0 +1,27 @@
+<template>  
+    <div class="spinner">
+        <template if:true={isLoading}>
+             <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+             </lightning-spinner>
+        </template>
+    </div>
+    <template if:true={searchStringChild}>
+        <template if:true={accountlist}>
+            <div class="slds-col ">
+                <div class="slds-grid slds-wrap">
+                    <template for:each={accountlist} for:item='acc'>
+                        <div class=" slds-col  slds-size_1-of-3 slds-p-around_x-small" key={acc.Id}>
+                            <c-card-component account={acc}></c-card-component>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+        <template if:true={norecord}>
+             <p>No record Found</p>
+        </template>
+        <template if:true={error}>
+          Error :- {error}
+        </template>
+    </template>
+</template>

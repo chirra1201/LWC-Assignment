@@ -1,0 +1,56 @@
+<template>
+    <div class="slds-theme_default slds-p-around_large rcorners3 slds-p-bottom_x-large">      
+        <div class="account">
+            <p>Account Detail</p>
+            <hr>
+        </div>
+        <template if:false={accountID}>No Record is selected </template>
+        <template if:true={accountID}>
+
+        <template if:false={showedit}>
+            <lightning-record-edit-form record-id={accountID} object-api-name="Account">
+                <lightning-messages>
+                </lightning-messages>
+                <lightning-output-field field-name="Name">
+                </lightning-output-field>
+                <lightning-output-field field-name="AccountNumber">
+                </lightning-output-field>
+                <lightning-output-field field-name="Phone">
+                </lightning-output-field>
+                <lightning-output-field field-name="Type">
+                </lightning-output-field>
+                <lightning-output-field field-name="Website">
+                </lightning-output-field>
+            </lightning-record-edit-form>
+        </br>
+            <lightning-button label="Edit Record" onclick={handleedit}></lightning-button>
+        </template>
+
+        <template if:true={showedit}>
+            <lightning-record-edit-form record-id={accountID} object-api-name="Account" onsuccess={handleSuccess}
+                onsubmit={handleSubmit}>
+                <lightning-messages>
+                </lightning-messages>
+                <lightning-input-field field-name="Name">
+                </lightning-input-field>
+                <lightning-input-field field-name="AccountNumber">
+                </lightning-input-field>
+                <lightning-input-field field-name="Phone">
+                </lightning-input-field>
+                <lightning-input-field field-name="Type">
+                </lightning-input-field>
+                <lightning-input-field field-name="Website">
+                </lightning-input-field>
+            </br>
+                <lightning-button variant="brand" type="submit" name="update" label="Update" >
+                </lightning-button>
+
+                <lightning-button class="slds-p-left_medium" label="Cancel" onclick={handlecancel}></lightning-button>
+
+            </lightning-record-edit-form>
+        </template>
+    </template>
+    </div>
+    </template>
+</br></br>
+</template>

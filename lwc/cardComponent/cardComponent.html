@@ -1,0 +1,20 @@
+<template>
+    <lightning-card icon-name="standard:account" title={account.Name} >
+        <div class="lineheight">
+        </br>
+        <p class="slds-p-horizontal_small slds-p-bottom_xx-small"><b>Id:</b>  {account.Id}</p>
+        <p class="slds-p-horizontal_small slds-p-bottom_xx-small"><b>Phone:</b> {account.Phone}</p>
+        <p class="slds-p-horizontal_small slds-p-bottom_xx-small"><b>Website: </b>{account.Website}</p>
+        <p class="slds-p-horizontal_small slds-p-bottom_xx-small"><b>Number Of Employees:</b>  {account.NumberOfEmployees}</p>
+
+        <p class="slds-p-horizontal_small slds-p-bottom_xx-small"><b>AccountNumber:</b>  {account.AccountNumber}</p>
+    
+    </br>
+    </div>
+        <p class="slds-p-around_small slds-p-bottom_xx-large">
+            <lightning-button label="Detail" slot="actions" onclick={handelclick} id={account.Id}>
+            </lightning-button>
+        </p>
+</br>
+    </lightning-card>
+</template>

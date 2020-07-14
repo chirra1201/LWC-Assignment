@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountldsDetailComponent": [
+                "accountldsDetailComponent/accountldsDetailComponent.js"
+            ],
+            "c/cardComponent": [
+                "cardComponent/cardComponent.js"
+            ],
+            "c/picklistSearch": [
+                "picklistSearch/picklistSearch.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/rootParent": [
+                "rootParent/rootParent.js"
+            ],
+            "c/searchResults": [
+                "searchResults/searchResults.js"
+            ],
+            "c/titleComponent": [
+                "titleComponent/titleComponent.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
