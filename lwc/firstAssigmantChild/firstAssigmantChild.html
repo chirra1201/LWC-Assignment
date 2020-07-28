@@ -1,0 +1,27 @@
+<template>
+    <template if:true={accountlist}>
+                <lightning-input class="slds-m-bottom_small" onchange={handleonchangenoofrecord} value={searchaccount}
+                    label="Find Account"></lightning-input></br>
+                <lightning-button variant="brand" label="Find Account" title="Primary action" onclick={handleClickChild}
+                    class="slds-m-left_x-small"></lightning-button>
+            </br>
+        </br>
+    </br>
+            <div class="slds-grid slds-gutters">
+                <template for:each={accountlist} for:item='account'>
+                    <div class="slds-m-around_medium slds-col  slds-box slds-theme_default" key={account.Id}>
+                      
+                        <lightning-card title={account.Name} key={account.Id}>
+                            <p class="slds-p-horizontal_small"> {account.NumberOfEmployees}</p>
+                            <p class="slds-p-horizontal_small">{account.Phone}</p>
+                            <p slot="footer">{account.Rating}</p>
+                          
+                        </lightning-card>
+                    </div>
+                    
+                </template>
+
+            </div>
+     
+    </template>
+</template>

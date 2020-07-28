@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-m-around_large slds-box slds-theme_default">
+        <div class="slds-grid slds-gutters">
+
+             <div class="slds-col slds-box slds-theme_default slds-m-around_large">
+                <lightning-input class="slds-m-bottom_small" onchange={handleonchnage} value={accountname}
+                    label="Account Name">
+                </lightning-input>
+                <lightning-input class="slds-m-bottom_small" onchange={handleonchangenoofrecord} value={noofrecord}
+                    label="Number of Record:"></lightning-input>
+
+                <lightning-button variant="brand" label="Find Account" title="Primary action" onclick={handleClick}
+                    class="slds-m-left_x-small"></lightning-button>
+            </div>
+            <template if:true={accountlist} >
+
+           
+            <div class="slds-col slds-box slds-theme_default slds-m-around_large">
+                <c-first-assigmant-child accountlist={accountlist} accountdisplaylist={accountlist}>
+                </c-first-assigmant-child>
+            </div>
+        </template>
+        </div>
+
+    </div>
+
+</template>
